@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Mock Interview Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🤖 AI Mock Interview Dashboard</h1>
+    <p>Practice technical and behavioral questions with an AI interviewer.</p>
+  </header>
+
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Interview Setup</h2>
+      <label for="job-title">Job Title</label>
+      <input type="text" id="job-title" placeholder="e.g. Frontend Developer" />
+
+      <label for="experience">Experience Level</label>
+      <select id="experience">
+        <option value="entry">Entry Level</option>
+        <option value="mid">Mid Level</option>
+        <option value="senior">Senior</option>
+      </select>
+
+      <label for="topic">Interview Topic</label>
+      <select id="topic">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="fullstack">Full‑Stack</option>
+      </select>
+
+      <label for="duration">Duration (min)</label>
+      <input type="number" id="duration" value="10" min="5" max="60" />
+
+      <button id="start-btn" class="btn btn-start">Start Interview</button>
+      <button id="end-btn" class="btn btn-end" disabled>End Interview</button>
+
+      <div id="status" class="status">
+        Ready to start your AI mock interview.
+      </div>
+    </div>
+
+    <!-- Main interview screen -->
+    <div class="main">
+      <div class="interview-screen">
+        <div id="chat-area" class="chat-area">
+          <div class="chat-message ai">
+            👋 Hello! I’m your AI interviewer. Please start by typing your response when the 
